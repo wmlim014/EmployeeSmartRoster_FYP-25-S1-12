@@ -10,9 +10,9 @@ with employee rostering.
 
 
 ## Other Information
-- Full Stack Page: [Demo Video](https://youtu.be/QVwrTHD8D0A?si=cHFMGRRfoxikp7qM)
+- Full Stack Web App: [Demo Video](https://youtu.be/QVwrTHD8D0A?si=cHFMGRRfoxikp7qM)
 - Marketing Video: [EmpRoster Marketing Video](http://youtu.be/vAIclB5AIGA?si=VcE1-wVUV1iMfE6Q "EmpRoster Marketing Video")
-- Project Page: [EmpRoster Project Page](http://infocommemailtaka.wixsite.com/employeeroster "EmpRoster Project Page")
+- Project Page: [EmpRoster Project Page](https://wmlim014.wixsite.com/emproster)
 - Project Submitted Link: [Main Project GitHub](https://github.com/Dewie123/testEmployeeSmartRoster)
 
 # Frontend Setup
