@@ -1,0 +1,47 @@
+:root {
+    /* Colors style */
+    --primary-background: #2B0F57;
+    --secondary-background: #F2F2F2;
+    --popup-background: #2C2C2C;
+    --hover-background: #F0E9FB;
+    --main-page-background: #F3ECFE;
+    --side-menu-background: #613A9F;
+    --side-menu-hover-background: #8159C3;
+    --side-menu-transparency: 92%;
+    --table-odd-row: #e0e0eb;
+
+    /* Text colors style */
+    --primary-text: #1F2937;
+    --secondary-text:#374962;
+    --light-color-text: #F0F0F5;
+    --purple-color-text:#8852E0;
+
+    /* Heading color style */
+    --h1: var(--primary-background);
+    --h2: #4A1A99;
+    --h3: #6A25DA;
+
+    /* Prompt color style */
+    --success-background: #f6ffed;
+    --success: #255b47;
+    --error-background: #fff2f0;
+    --error: #bc1010;
+    --warning-background: #f0eedb;
+    --warning: #cc5200;
+    --info-background: #edeff8;
+    --info: #004f99;
+
+    /* Font size style */
+    --text-size: 16px;
+    --text-size-m: 14px;
+    --secondary-text: var(--text-size-m);
+    --secondary-text-m: 12px;
+    --text-h1: 32px;
+    --text-h1-m: 28px;
+    --text-h2: var(--text-h1-m);
+    --text-h2-m: 24px;
+    --text-h3: var(--text-h2-m);
+    --text-h3-m: 20px;
+    --text-h4: var(--text-h3-m);
+    --text-h4-m: 18px;
+}

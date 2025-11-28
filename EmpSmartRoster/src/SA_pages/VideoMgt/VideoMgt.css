@@ -1,0 +1,112 @@
+.upload-new-demo-video-component {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    width: fit-content;
+}
+.upload-video-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    align-items: center;
+
+    .video-title-input {
+        max-width: 400px;
+    }
+}
+.upload-demo-video-title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+}
+.upload-video-button {
+    color: var(--primary-background);
+}
+.upload-video-button:hover {
+    color: var(--error);
+    cursor: pointer;
+}
+.upload-video-button.disabled{
+    color: var(--light-color-text);
+}
+
+.uploaded-video-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.default-preview-video {
+    width: 85%;
+    max-width: 800px;
+}
+
+.uploaded-demo-video-list-item {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+
+    .btns-grp {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        justify-content: end;
+        align-items: center;
+        width: fit-content;
+
+        .view-video-icons {
+            font-size: 23px;
+            color: var(--primary-background);
+        }
+        .view-video-icons:hover {
+            cursor: pointer;
+            color: var(--error);
+        }
+    }
+}
+
+.sa-view-video-display-card:hover,
+.sa-view-video-display-card.onhover {
+    cursor: pointer;
+    background-color: rgb(237, 218, 255);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tablet (769px-1023px) */
+@media only screen and (min-width: 769px) and (max-width: 1352px) {
+    .uploaded-video-container {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: start;
+        align-items: center;
+    }
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .upload-new-demo-video-component {
+        width: auto;
+    }
+    .upload-video-content {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .uploaded-video-container {
+        flex-direction: column;
+        gap: 10px;
+        justify-content: start;
+        align-items: center;
+    }
+}

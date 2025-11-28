@@ -1,0 +1,21 @@
+.regis-req-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Tablet (769px-1023px) */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .reg-filter-group {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

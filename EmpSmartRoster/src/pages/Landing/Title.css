@@ -1,0 +1,61 @@
+.heading-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  min-height: 50vh;
+  background-color: #f9f9f9;
+  animation: fadeInUp 1s ease-out forwards;
+  overflow: hidden;
+}
+
+.heading-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./whiteBG.jpg'); /* Ensure the path is correct */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.heading-section h1,
+.heading-section h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.heading-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.heading-section h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  max-width: 800px;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+
+  .heading-section h1 {
+    font-size: 2.25rem;
+  }
+
+  .heading-section h2 {
+    font-size: 1.125rem;
+    max-width: 90%;
+  }
+}

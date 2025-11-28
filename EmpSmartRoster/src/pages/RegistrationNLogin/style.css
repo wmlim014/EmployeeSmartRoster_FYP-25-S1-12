@@ -1,0 +1,218 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-self: center;
+  background-color: white;
+  padding: 23px;
+  justify-content: center;
+  justify-items: center;
+  gap: 15px;
+  border-width: 1px;
+  border-radius: 10px;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  border-style: outset;
+  border-right-color: var(--side-menu-background);
+  border-bottom-color: var(--side-menu-background);
+}
+
+.login, .register, .reset-pw, .request-input-email-for-reset{
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  width: 100%;
+  gap: 30px;
+  justify-content: center;
+}
+
+.welcome-to-emproster {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  text-align: center;
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.25));
+  color: black;
+  line-height: 1.2;
+}
+
+.para {
+  text-align: center;
+}
+
+.para-1 {
+  font-size: 55px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-background);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+
+.forms-input {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Login.tsx, Registration.tsx */
+.login-button-group, .register-btns-grp {
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+  align-items: center;
+}
+
+.login-reset-pw {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+  justify-content: end;
+  height: 30px;
+}
+
+.login-create-acc, .register-log-in {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Register.tsx */
+.registration-form {
+  flex: 1 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-self: center;
+  padding: 20px;
+  overflow: auto; /* Enable scrolling for content */
+  overflow-x: hidden;
+  justify-content: start;
+}
+
+.registration-form-content {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+
+  .registration-form-company,
+  .registration-form-user-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 15px;
+    width: 300px;
+  }
+}
+
+/* ResetPW.tsx */
+.reset-password-form {
+  max-width: 400px;
+}
+
+.OTP-form-input {
+  padding-bottom: 20px;
+  border-bottom-width: 1.5px;
+  border-bottom-color: var(--popup-background);
+  border-bottom-style: outset;
+}
+
+.pw-information {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: start;
+  align-items: center;
+}
+
+.reset-pw-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .reset-pw-resend-otp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Password Rules */
+.pw-information {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.pw-info {
+  position: relative;
+  display: inline-block;
+  width: auto;
+}
+
+.pw-info .pw-info-icon {
+  cursor: pointer;
+  color: var(--primary-background);
+  transition: color 0.2s;
+  margin-left: 12px;
+}
+
+.pw-info .pw-info-icon:hover {
+  color: var(--side-menu-background);
+}
+
+/* Reset Password Content (invisible by default) */
+.pw-info-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 300px;
+  color: var(--light-color-text);
+  background-color: var(--side-menu-background);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  padding: 15px;
+  margin-top: 5px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Show the reset password rule when active */
+.pw-info.active .pw-info-content {
+  display: block;
+}
+
+.pw-info.active .pw-info-icon {
+  color: var(--side-menu-background);
+}
+
+/* Dropdown arrow */
+.pw-info-content::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 15px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent var(--side-menu-background) transparent;
+  filter: drop-shadow(0 -2px 1px rgba(0,0,0,0.1));
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

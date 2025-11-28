@@ -1,0 +1,216 @@
+.company-profile-page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px !important;
+
+}
+
+.company-profile-page-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.refresh-page-icon:hover {
+    color: var(--error);
+    cursor: pointer;
+}
+
+.card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+}
+
+.company-profile-page-top,
+.roles-n-skillsets-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.roles {
+    max-width: 49%;
+}
+.roles.mobile {
+    max-width: none;
+}
+.role-text-content:hover {
+    cursor: pointer;
+    background-color: var(--info-background) !important;
+}
+.role-text-content.selected {
+    border: 2px solid var(--primary-background) !important;
+}
+
+.create-new-role-n-skill {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+    width: 100%;
+
+    .add-new-role, 
+    .add-new-skillset {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.company-profile-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+
+    .company-profile-title-end {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: end;
+
+        .icons {
+            font-size: 20px;
+        }
+    }
+}
+
+.company-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+
+    .company-profile-data {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        justify-content: start;
+        align-items: start;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+
+        .title {
+            width: 150px;
+            min-width: 150px;
+            font-weight: bold;
+        }
+    }
+
+    .odd-row {
+        background-color: var(--main-page-background);
+    }
+}
+
+.create-new-skillset-card {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    padding-bottom: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    background-color: var(--main-page-background);
+
+    .add-role-skill.disabled {
+        color: var(--light-color-text);
+    }
+    .add-role-skill.disabled:hover {
+        cursor: default;
+        color: var(--light-color-text);
+        background-color: white;
+    }
+}
+
+.confirm-company-info-data {
+    .title {
+        font-weight: bold;
+    }
+}
+
+.confirm-update-company-profile-button-grp{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: end;
+
+}
+
+.roles, .skillsets {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 15px;
+
+    .role-n-skillset-text {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+
+        .icons {
+            font-size: 25px;
+        }
+    }
+
+    .role-n-skillset-text.even-row {
+        background-color: var(--main-page-background);
+    }
+}
+
+.add-role-skill {
+    color: var(--primary-background);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sub-header {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 10px;
+    justify-items: start;
+    align-items: center;
+}
+
+.add-role-skill:hover {
+    background-color: var(--side-menu-background);
+    color: var(--light-color-text);
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .company-profile .company-profile-data {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .company-profile-page-top, 
+    .roles-n-skillsets-container {
+        flex-direction: column;
+    }
+    
+    .roles-n-skillsets-container {
+        height: fit-content;
+    }
+}

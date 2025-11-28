@@ -1,0 +1,16 @@
+.otp-input-group {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 360px;
+    column-gap: 10px;
+}
+
+.otp-input {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1;
+}

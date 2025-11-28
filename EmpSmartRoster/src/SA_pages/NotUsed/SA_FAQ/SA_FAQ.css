@@ -1,0 +1,157 @@
+.faq-logo{
+    font-size: 50px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.desktop-table-header {
+    display: flex;
+    flex-direction: row;
+  
+    .header-faq-question {
+        min-width: 600px;
+        max-width: 600px;
+    }
+  
+    .header-faq-answer {
+        width: 1fr; /* takes remaining space */
+    }
+
+}
+
+.faq-add-section {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.faq-table-body {
+    
+    .body-faq-question {
+        min-width: 600px;
+        max-width: 600px;
+    }
+  
+    .body-faq-answer {
+        width: 1fr; /* takes remaining space */
+    }
+
+    .faq-action-buttons {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; 
+        align-items: center;
+    }
+  
+    .faq-action-buttons .primary-button {
+        width: auto !important;
+        margin-left: auto; 
+    }
+  
+}
+
+
+.faq-edit-detail-contents{
+    background-color:#F3ECFE;
+  }
+
+  .title-faq-edit-details-question{
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .title-faq-edit-details-answer{
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .title-faq-view-details{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+  
+
+.faq-add-input {
+    border: 2px solid;       /* Default light grey border */
+    border-color: #8852E0;           /* Or whatever color you want */
+    padding: 4px;                 /* Optional: add some padding */
+    border-radius: 4px;           /* Optional: slightly rounded corners */
+    font-size: 15px;
+    width: 100%;                 /* Full width */
+    background-color: #fff; /* Light grey background */
+  }
+  
+.title-add-faq{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.faq-add-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 8px;
+}
+
+.faq-popup-warning-icon{
+    color: var(--error);
+    font-size: 40px;
+}
+
+.faq-popup-delete-content{
+    text-align: center;
+    font-size: large;
+}
+
+.faq-search-section{
+    width: 50%;
+    margin-left: auto;
+    padding-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.faq-search-input {
+    width: 100%;
+    padding-right: 2.5rem; /* Ensure space for the clear button */
+    box-sizing: border-box;
+  }
+  
+  .faq-search-clear {
+    position: absolute;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333; /* Adjust color as needed */
+}
+
+
+/* By default, show desktop and hide mobile */
+.desktop-faq-container {
+    display: block;
+  }
+  .mobile-faq-container {
+    display: none;
+  }
+  
+  /* For mobile devices, hide the desktop view and show the mobile view */
+  @media only screen and (max-width: 768px) {
+    .desktop-faq-container {
+      display: none;
+    }
+    .mobile-faq-container {
+      display: block;
+    }
+  }
+  
+  /* Optionally, if you need a separate adjustment for tablets */
+  @media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .mobile-faq-container {
+        display: block;
+      }
+  }

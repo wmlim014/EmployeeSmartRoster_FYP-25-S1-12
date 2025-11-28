@@ -1,0 +1,24 @@
+
+.registration-request {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: fit-content;
+}
+
+button {
+    background-color: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+button:hover {
+    background-color: none; 
+}
+
+.set-visible {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+}

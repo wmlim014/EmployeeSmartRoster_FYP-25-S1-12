@@ -1,0 +1,112 @@
+.leave-mgt-page-title {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.leave-request-confirmation {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    gap: 10px;
+
+    .leave-request-confirmation-detail {
+        display: flex;
+        justify-content: start;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        
+        .title {
+            min-width: 130px;
+        }
+    }
+    .odd-row {
+        background-color: var(--light-color-text);
+    }
+}
+
+.leave-create-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px !important;
+
+    .leave-create-n-edit-start-n-end {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+
+.leave-header-desc,
+.cell-leave-desc {
+    width: 1fr;
+}
+.leave-header-from,
+.cell-leave-from {
+    min-width: 150px;
+    max-width: 150px;
+}
+.leave-header-status,
+.cell-leave-status,
+.leave-header-type,
+.cell-leave-type {
+    min-width: 120px;
+    max-width: 120px;
+}
+.leave-header-start,
+.cell-leave-start,
+.leave-header-end,
+.cell-leave-end,
+.cell-leave-submitted-at,
+.leave-header-submitted-at {
+    min-width: 110px;
+    max-width: 110px;
+}
+
+.leave-detail-data-container {
+    gap: 15px !important;
+}
+.leave-info-data-type-header-text {
+    width: fit-content;
+}
+.leave-info-data-type-header {
+    display: flex;
+    justify-content: start !important;
+    gap: 30px;
+}
+.leave-detail-data-status {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+}
+.leave-status {
+    color: var(--error);
+}
+.leave-status.approved {
+    color: var(--success);
+}
+.leave-status.pending {
+    color: var(--warning);
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .leave-request-confirmation-detail {
+        flex-direction: column;
+    }
+
+    .leave-create-edit-form {
+        .leave-create-n-edit-start-n-end {
+            flex-direction: column;
+        }
+    }
+}

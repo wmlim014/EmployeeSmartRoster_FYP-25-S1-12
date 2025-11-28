@@ -1,0 +1,218 @@
+.edit-task-icon {
+    font-size: 25px !important;
+}
+
+.create-n-edit-task-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start !important;
+    gap: 10px;
+}
+
+.tasks-creation-n-edition-header,
+.tasks-creation-add-more-task {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    gap: 20px;
+    font-weight: bold;
+
+    .btns-grp {
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        width: fit-content;
+
+        .tasks-creation-n-edition-header-icon {
+            font-size: 17px;
+        }
+        .tasks-creation-n-edition-header-icon:hover {
+            color: var(--primary-background);
+            cursor: pointer;
+        }
+    }
+}
+.tasks-creation-add-more-task {
+    color: var(--info);
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    border: 0.5px solid var(--info);
+}
+.tasks-creation-add-more-task:hover {
+    color: var(--primary-background);
+    cursor: pointer;
+    background-color: var(--info-background);
+}
+
+.tasks-creation-n-edition-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.create-n-edit-task-form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    .create-n-edit-task-form-content,
+    .task-assignation-detail-container {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 13px;
+        width: 50%;
+        padding: 10px;
+        padding-top: 0px;
+    }
+    .task-assignation-detail-container {
+        border-left: 2px;
+        border-left-style: outset;
+        border-left-color: var(--primary-background);
+    }
+    .task-assignation-detail-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 13px;
+
+        .btn-grp {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+
+            span {
+                margin: 5px;
+                color: var(--error);
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.create-n-edit-task-form-checkbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.create-task-button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: end;
+    width: auto;
+}
+
+.no-of-emp-input {
+    max-width: 250px;
+}
+
+.show-timeline-for-create-task {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: start;
+}
+
+.timeline-creation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select-available-timeline-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.create-new-timeline-icon:hover {
+    color: var(--side-menu-background);
+    cursor: pointer;
+}
+
+.all-create-task-confirmation-header {
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+    
+    .task-creation-n-edit-confirmation-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+
+        .create-task-confirmation-change-task-btns-grp {
+            display: flex;
+            gap: 5px;
+            justify-content: end;
+            width: fit-content;
+            align-items: center;
+            font-size: 18px;
+            
+            .go-prev-icon:hover,
+            .go-next-icon:hover {
+                cursor: pointer;
+                color: var(--info);
+            }
+        }
+    }
+}
+
+.all-create-o-edit-task-data {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    max-height: 80%;
+    margin-bottom: 10px;
+
+    .odd-row {
+        background-color: var(--light-color-text) !important;
+    }
+}
+
+.create-n-edit-task-btns-grp {
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+
+    .error-message-icon {
+        min-width: 15px;
+    }
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .create-n-edit-task-form-container {
+        flex-direction: column;
+    }
+
+    .task-assignation-detail-container,
+    .create-n-edit-task-form-content {
+        width: auto !important;
+    }
+
+    .task-assignation-detail-container {
+        border-left: 0px !important;
+        border-top: 2px outset var(--primary-background);
+        padding-top: 15px !important;
+    }
+}

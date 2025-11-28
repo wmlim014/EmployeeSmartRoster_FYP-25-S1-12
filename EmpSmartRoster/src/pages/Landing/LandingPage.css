@@ -1,0 +1,15 @@
+
+
+.landingPage{
+  background-color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* #subscription,
+#reviews,
+#faq {
+  scroll-margin-top: 55px;  */
+  /* Adjust this value to match your header's height */
+/* } */

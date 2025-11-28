@@ -1,0 +1,51 @@
+.faq-footer {
+  border-top: 1px solid gainsboro;
+  background-color: white;
+  padding: 8px 32px;
+  display: flex;
+  width: 100%;
+  line-height: normal;
+}
+
+.faq-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 23px;
+  padding-right: 31px;
+  flex-grow: 1;
+  gap: 16px;
+}
+
+.faq-icon {
+  object-fit: cover;
+  object-position: center;
+  width: 72px;
+  height: 72px;
+}
+
+.faq-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  color: black;
+  line-height: 1.4;
+  gap: 10px;
+}
+
+.faq-title {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.faq-text {
+  align-self: stretch;
+}
+
+.faq-question {
+  text-decoration: underline;
+}
+
+.faq-spacer {
+  height: 22px;
+}

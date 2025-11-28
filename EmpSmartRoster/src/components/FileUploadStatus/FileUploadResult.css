@@ -1,0 +1,22 @@
+.file-upload-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+
+    
+}
+
+.file-upload-status.success {
+    color: var(--success);
+}
+
+.file-upload-status.fail {
+    color: var(--error);
+}
+
+.file-upload-status.uploading {
+    color: var(--info);
+}
+

@@ -1,0 +1,102 @@
+.header-sa-subtransaction-REF,
+.cell-sa-subtransaction-REF {
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.header-sa-subtransaction-UEN,
+.cell-sa-subtransaction-UEN {
+    min-width: 115px;
+    max-width: 115px;
+}
+
+.header-sa-subtransaction-startDate,
+.cell-sa-subtransaction-startDate,
+.header-sa-subtransaction-endDate,
+.cell-sa-subtransaction-endDate {
+    min-width: 120px;
+    max-width: 120px;
+}
+
+.header-sa-subtransaction-bizName,
+.cell-sa-subtransaction-bizName,
+.header-sa-subtransaction-reason,
+.cell-sa-subtransaction-reason {
+    width: 1fr;
+}
+
+.header-sa-subtransaction-subsStatus,
+.cell-sa-subtransaction-subsStatus {
+    min-width: 100px;
+    max-width: 100px;
+}
+
+.sa-view-subtransaction-item-view:hover {
+    cursor: pointer;
+    border: 2px solid var(--table-odd-row);
+}
+
+.reference-uen {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: start;
+    align-items: center;
+}
+
+.sa-view-trans-detail-subs-payment-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+
+    .small-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        width: fit-content;
+        gap: 5px;
+    }
+    .payment-status-icon {
+        color: var(--error) !important;
+    }
+    .payment-status-icon.completed {
+        color: var(--success) !important;
+    }
+    .payment-status-icon.pending {
+        color: var(--warning) !important;
+    }
+}
+
+.subs-start-end-date-container,
+.subs-start-end-content {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+}
+.subs-start-end-content {
+    gap: 15px;
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .sa-view-trans-detail-subs-payment-status {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .subs-transaction-title {
+        flex-direction: column !important;
+        align-items: start !important;
+        gap: 0px !important;
+    }
+
+    .reference-uen {
+        flex-direction: column;
+        gap: 0px;
+        align-items: start;
+    }
+}

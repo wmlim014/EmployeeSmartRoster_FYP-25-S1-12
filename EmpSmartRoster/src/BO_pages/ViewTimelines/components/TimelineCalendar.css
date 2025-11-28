@@ -1,0 +1,257 @@
+/* Main container layout */
+.timeline-management-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    gap: 0px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 8px 0;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+/* Calendar container */
+.calendar-container {
+    flex: 1;
+}
+
+/* Custom toolbar */
+.rbc-toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+    background-color: var(--purple-color-text);
+    border-radius: 5px;
+}
+
+.rbc-toolbar-label {
+    color: white;
+}
+
+.today-month-select-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rbc-btn-group button {
+    padding: 5px 10px;
+    margin-left: 0px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.rbc-btn-group button.rbc-active {
+    background-color: var(--popup-background);
+    color: white;
+}
+
+.rbc-btn-group .icon-button {
+    background-color: none !important;
+    font-size: 19px;
+}
+
+/* Custom Header */
+.rbc-header {
+    background-color: var(--side-menu-background);
+    padding: 5px;
+    color: var(--light-color-text);
+}
+
+/* Custom grid */
+.rbc-month-view, /* Month Grid */
+.rbc-day-bg /* Day Cell Grid */ {
+    background-color: white;
+}
+
+.rbc-off-range-bg {
+    background-color: var(--light-color-text);
+}
+
+.rbc-today {
+    background-color: var(--main-page-background);
+}
+
+.rbc-selected-cell {
+    background-color: #d2e3fc;
+}
+
+/* Month view styling */
+.rbc-month-view {
+    height: 100%;
+}
+
+.rbc-month-row {
+    min-height: 100px;
+}
+
+.rbc-date-cell {
+    padding: 5px;
+}
+
+.rbc-date-cell:hover {
+    cursor: pointer;
+}
+
+/* Week view styling */
+.rbc-time-view {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+}
+
+.rbc-time-header {
+    display: flex;
+    flex-direction: row;
+
+    .rbc-time-header-content {
+        width: 15%;
+    }
+}
+
+.rbc-time-header-content .rbc-today {
+    background-color: var(--primary-background);
+}
+
+.rbc-label.rbc-time-header-gutter,
+.rbc-timeslot-group {
+    /* width: 200px !important; */
+    min-width: 100px !important;
+    max-width: 100px !important;
+}
+
+.rbc-header .rbc-today {
+    background-color: var(--primary-background) !important;
+}
+
+/* Agenda view styling */
+.rbc-event-content .custom-event {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.rbc-agenda-event-cell .custom-event {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: start;
+    gap: 0px;
+    width: 100%;
+    border-left-style: none;
+    color: var(--primary-background);
+}
+
+.rbc-agenda-event-cell .custom-event:hover {
+    cursor: pointer;
+}
+
+.rbc-agenda-content .rbc-agenda-table .event-style {
+    border-left-style: none;
+}
+
+/* Show more events indicator */
+.rbc-show-more {
+    color: var(--side-menu-background);
+    /* font-size: 0.8em; */
+}
+
+/* Custom event styling */
+.custom-event {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--secondary-text-m);
+    gap: 10px;
+    align-items: center;
+    padding: 5px;
+    color: var(--primary-background);
+}
+
+.event-resource {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    width: fit-content;
+    justify-content: start;
+    font-size: 0.8em;
+}
+
+.timeline-management-container .event-style {
+    padding: 2px;
+    font-size: 10px;
+    border-radius: 5px;
+    border-left-width: 5px;
+    border-left-color: var(--info);
+    border-left-style: outset;
+    background-color: var(--info-background);
+}
+
+.event-style:hover {
+    background-color: white;
+    border-left-color: var(--info);
+}
+
+/* Based on status */
+.event-style.in-progress {
+    background-color: var(--warning-background);
+    border-left-color: var(--warning);
+}
+
+.event-style.completed {
+    background-color: var(--success-background);
+    border-left-color: var(--success);
+}
+
+.event-style:hover {
+    background-color: var(--info-background);
+    border: var(--info);
+    border-width: 2px;
+    border-style: inset;
+}
+
+.event-style.in-progress:hover {
+    background-color: var(--warning-background);
+    border: var(--warning);
+    border-width: 2px;
+    border-style: inset;
+}
+
+.event-style.completed:hover {
+    background-color: var(--success-background);
+    border: var(--success);
+    border-width: 2px;
+    border-style: inset;
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    /* .rbc-toolbar {
+        flex-direction: column;
+        align-items: start;
+    } */
+}

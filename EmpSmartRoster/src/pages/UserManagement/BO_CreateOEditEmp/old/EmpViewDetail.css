@@ -1,0 +1,82 @@
+/* Prevent horizontal scroll */
+body, html {
+  overflow-x: hidden;
+}
+
+.viewProfileContainer {
+  /* margin-left: 200px; */
+  /* margin-top: 50px; */
+  padding-right: 1rem;
+}
+
+.viewProfileContent {
+  padding: 1.5rem;
+  margin-left: 20px;
+  overflow-x: auto;
+}
+
+.employeeDetailTable {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin-top: 1rem;
+}
+
+.employeeDetailTable th,
+.employeeDetailTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+.employeeDetailTable th {
+  background-color: #f4f4f4;
+  width: 30%;
+}
+
+.employeeDetailTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.editBtn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background-color: #45a049;
+}
+
+.employeeDetailTable input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+
+/* Responsive handling */
+@media (max-width: 768px) {
+  .viewProfileContainer {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .employeeDetailTable {
+    font-size: 14px;
+  }
+
+  .viewProfileContent {
+    margin-left: 0;
+    padding: 1rem 0;
+  }
+}

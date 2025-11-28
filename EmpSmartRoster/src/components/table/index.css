@@ -1,0 +1,26 @@
+.table-header {
+    padding: 7px;
+    border-bottom-style: outset;
+    border-bottom-width: 3px;
+    border-bottom-color: var(--popup-background);
+    background-color: var(--side-menu-background);
+    height: auto;
+}
+
+.table-header-text {
+    color: var(--light-color-text);
+    font-weight: bold;
+}
+
+.table-cell {
+    padding: 7px;
+    border-bottom: 1px;
+    border-bottom-style: outset;
+    border-bottom-color: var(--primary-background);
+    height: auto;
+    background-color: white;
+}
+
+.table-cell-text {
+    height: auto;
+}

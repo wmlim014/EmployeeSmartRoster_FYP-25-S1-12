@@ -1,0 +1,141 @@
+.subscription-plans-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.subscription-plan-card {
+  background: var(--secondary-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscription-plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-plan-card .plan {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: var(--side-menu-hover-background);
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.subscription-plan-card .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.subscription-plan-card .emp-limit {
+  font-size: 1rem;
+  margin-bottom:0.5rem;
+  font-weight: bolder;
+  color: var(--secondary-text);
+  text-align: center;
+}
+
+.subscription-plan-card .emp-limit.heart-beat {
+  animation: heartbeat 2.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  75% {
+    transform: scale(1.05);
+  }
+}
+
+.features-list1 {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    filter: blur(0.8px);
+}
+
+.features-list1 li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.feature-tick{
+    font-size: 1.3rem;
+    color: #8257c6;
+}
+
+.subscription-disclaimer {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--warning);
+    text-align: center;
+}
+
+.edit-button {
+    background: var(--primary-color);
+    color: rgb(21, 0, 208);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.edit-button:hover {
+    background: var(--primary-dark);
+}
+
+.cancel-button {
+    background: #ff4444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.cancel-button:hover {
+    background: #cc0000;
+}
+
+.edit-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+/* Keep your existing styles for other elements */
+.features-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.feature-tick {
+    font-size: 1.3rem;
+    color: #8257c6;
+}

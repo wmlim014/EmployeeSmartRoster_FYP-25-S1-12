@@ -1,0 +1,36 @@
+.full-width {
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+/* Ensure the form fields have consistent styling */
+.form-field {
+    display: flex;
+    flex-direction: column; /* Stack label above select */
+    margin-bottom: 10px; /* Optional spacing between fields */
+}
+
+/* Label styling */
+.form-field label {
+    font-size: 14px; /* Adjust font size if needed */
+    margin-bottom: 5px; /* Space between label and dropdown */
+}
+
+/* Optional: Add styles for the entire table if necessary */
+.createEmployeeTable {
+    width: 100%;
+    table-layout: fixed; /* Ensures the columns are evenly spaced */
+}
+
+.create-new-emp-icon {
+    font-size: 30px;
+    padding: 3px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+.create-new-emp-icon:hover {
+    background-color: var(--primary-background);
+    color: var(--light-color-text);
+    cursor: pointer;
+}

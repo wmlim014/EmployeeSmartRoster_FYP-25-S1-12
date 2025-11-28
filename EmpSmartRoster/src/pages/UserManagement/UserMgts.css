@@ -1,0 +1,22 @@
+.UserMgts {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-list {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    justify-items: start;
+    justify-content: start;
+}
+
+.bo-employee-list-page-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}

@@ -1,0 +1,91 @@
+/***************************************************************
+ * Outer container: centers the heading + layout vertically & horizontally
+ ***************************************************************/
+ .view-profile {
+    min-height: 20vh;             /* fill the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* vertical centering */
+    align-items: center;           /* horizontal centering */
+    margin: 0;
+    background-color: #f3eafc;     /* optional light purple */
+  }
+  
+  /***************************************************************
+   * Page Title
+   ***************************************************************/
+  .view-profile__title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  /***************************************************************
+   * Layout container (the white card + the side buttons)
+   ***************************************************************/
+  .view-profile__layout {
+    display: flex;
+    align-items: flex-start;  /* align them at the top edge */
+    gap: 40px;                /* space between the card and the buttons */
+    padding-left: 39%;
+  }
+  
+  /***************************************************************
+   * The white container (profile card)
+   ***************************************************************/
+  .view-profile__card {
+    background-color: #fff;
+    width: 380px;             /* adjust as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;       /* center text, optional */
+    
+  }
+
+  
+  /* Icon styling */
+  .view-profile__icon {
+    color: var(--primary-background);
+    margin-bottom: 16px;
+    margin-left: 38%;
+  }
+  
+  /* Info text */
+  .view-profile__info {
+    margin-bottom: 16px;
+    text-align: left;         /* left-align labels if you prefer */
+  }
+  
+  .view-profile__label {
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+  
+  /* Update button */
+  .bo_button_update {
+    padding-left: 22%;
+  }
+  
+  /***************************************************************
+   * Side buttons (outside the card)
+   ***************************************************************/
+  .view-profile__side-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* vertical space between the two buttons */
+    width: 300px;
+    padding-right: 39px;
+  }
+  
+  .side-button {
+    background-color: var(--primary-background); /* purple */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  

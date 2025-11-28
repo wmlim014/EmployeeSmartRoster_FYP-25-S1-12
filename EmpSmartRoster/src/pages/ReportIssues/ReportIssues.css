@@ -1,0 +1,60 @@
+.issues-page-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: start;
+    align-items: center;
+}
+
+.issue-form-title-n-category,
+.issue-prompt-confirmation-form-title-n-category {
+    display: flex;
+    flex-direction: row !important;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.issue-prompt-confirmation-form-title,
+.issue-prompt-confirmation-form-category {
+    display: flex;
+    flex-direction: column;
+    gap: 3px !important;
+}
+
+.issue-prompt-confirmation-form-issue-des {
+    display: flex;
+    flex-direction: column;
+    gap: 8px !important;
+}
+
+.header-sa-view-issues-title,
+.cell-sa-view-issues-title {
+    min-width: 200px;
+    max-width: 200px;
+}
+.header-sa-view-issues-category,
+.cell-sa-view-issues-category,
+.header-sa-view-issues-status,
+.cell-sa-view-issues-status {
+    min-width: 150px;
+    max-width: 150px;
+}
+.header-sa-view-issues-desc,
+.cell-sa-view-issues-desc {
+    width: 1fr;
+}
+.sa-view-issues-decs-icon {
+    font-size: 25px;
+    margin: 2.5px;
+    width: fit-content;
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .issue-form-title-n-category,
+    .issue-prompt-confirmation-form-title-n-category {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

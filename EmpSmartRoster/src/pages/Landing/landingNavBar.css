@@ -1,0 +1,178 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base Navbar Styles */
+.landing-navbar-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Add padding to body so content doesn't hide behind fixed navbar */
+
+
+/* Container to align content within navbar */
+.landing-navbar-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative; /* Needed for absolute hamburger */
+}
+
+/* Navbar Left: Logo and Brand */
+.landing-navbar-navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.landing-navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.landing-navbar-brand-logo {
+  height: 24px;
+  width: auto;
+  margin-right: 8px;
+}
+
+/* Navbar Right: Navigation links and auth buttons */
+.landing-navbar-navbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
+.landing-navbar-nav-link {
+  text-decoration: none;
+  color: #555555;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.landing-navbar-nav-link:hover {
+  color: #000000;
+}
+
+/* Stylish Login and Register Buttons (Black & White) */
+.landing-navbar-nav-button {
+  padding: 6px 18px; /* Slightly smaller height */
+  background-color: #ffffff;
+  color: #333333; /* Black text */
+  border: 2px solid #333333; /* Black border */
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600; /* Bold */
+  cursor: pointer;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1), -2px -2px 6px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.landing-navbar-nav-button:hover {
+  background-color: #333333; /* Black on hover */
+  color: #ffffff; /* White text on hover */
+  border-color: #ffffff; /* White border on hover */
+  transform: translateY(-2px); /* Slight hover effect */
+}
+
+.landing-navbar-nav-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(72, 157, 255, 0.5);
+}
+
+/* Disable hover styles when button is disabled */
+.landing-navbar-nav-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #ffffff; /* Ensure it doesn't turn black on hover */
+  color: #333333;
+  border: 2px solid #333333;
+  transform: none; /* No animation */
+  box-shadow: none;
+}
+
+/* Optional: prevent hover effects from triggering even if :disabled is not picked up by pointer-events */
+.landing-navbar-nav-button:disabled:hover {
+  background-color: #ffffff;
+  color: #333333;
+  border-color: #333333;
+  transform: none;
+}
+
+
+/* Mobile Hamburger Icon - Hidden on Desktop */
+.landing-navbar-mobile-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.landing-navbar-hamburger-icon {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+/* Mobile Menu (Dropdown) */
+.landing-navbar-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  /* Reset navbar-left width */
+  .landing-navbar-navbar-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto; /* changed from flex: 1 */
+    margin: 0 auto;
+  }
+
+  /* Hide desktop menu on mobile */
+  .landing-navbar-desktop-menu {
+    display: none;
+  }
+
+  .landing-navbar-mobile-hamburger {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10001; /* just in case */
+  }
+}
+
+.landing-navbar-menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px; /* You can adjust this number to your liking */
+}

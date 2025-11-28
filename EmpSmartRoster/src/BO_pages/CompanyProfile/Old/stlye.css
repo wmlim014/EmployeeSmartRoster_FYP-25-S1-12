@@ -1,0 +1,36 @@
+/* Company Profile */
+.main-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.company-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .company-profile-title,
+    .company-profile-data {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .company-profile-title {
+        justify-content: space-between;
+        color: var(--primary-background);
+        
+        .company-profile-icon {
+            font-size: 30px;
+        }
+    }
+
+    .company-profile-data {
+        justify-content: start;
+
+        .title {
+            width: 140px;
+        }
+    }
+}

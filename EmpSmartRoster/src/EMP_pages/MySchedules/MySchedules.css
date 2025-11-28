@@ -1,0 +1,128 @@
+.my-schedule-page-header {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.sync-google-calendar-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.google-calenar-icon {
+    font-size: 20px;
+    min-width: 20px;
+}
+
+.task-status {
+    color: var(--info);
+    align-self: center;
+}
+.task-status.in-progress {
+    color: var(--warning);
+}
+.task-status.completed {
+    color: var(--success);
+}
+
+.emp-task-detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.emp-view-task-detail-start-n-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.task-detail-description-icon {
+    margin-top: 3px;
+}
+.emp-timeline-button-container {
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.other-tasks-for-swap-container {
+    align-self: center;
+    max-width: 450px;
+    max-height: 430px;
+    overflow: auto;
+}
+
+.swap-task-reason-popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.orginal-start-end-vs-swapped-start-end {
+    display: flex;
+    gap: 10px;
+
+    .swapped-start-end {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.task-for-swap-allocated-to {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.swap-time-management {
+    background-color: #e7dafc;
+}
+.submitted-time-swap {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.submitted-swap-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+.swap-request-task-title {
+    min-width: 50px !important;
+    max-width: 50px !important;
+}
+
+.swap-task-detail-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+}
+.swap-request-status {
+    color: var(--error);
+}
+.swap-request-status.pending {
+    color: var(--warning);
+}
+.swap-request-status.approved {
+    color: var(--success);
+}
+
+/* Tablet (769px-1023px) */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .emp-view-task-detail-start-n-end{
+        flex-direction: column;
+        justify-content: start;
+        gap: 15px;
+    }
+
+    .orginal-start-end-vs-swapped-start-end {
+        flex-direction: column;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+}

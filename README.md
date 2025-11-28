@@ -14,8 +14,16 @@ with employee rostering.
 - Hosted Product Site: [EmpRoster](http://emproster.com/ "EmpRoster")
 - Marketing Video: [EmpRoster Marketing Video](http://youtu.be/vAIclB5AIGA?si=VcE1-wVUV1iMfE6Q "EmpRoster Marketing Video")
 - Project Page: [EmpRoster Project Page](http://infocommemailtaka.wixsite.com/employeeroster "EmpRoster Project Page")
+- Project Submitted Link: [Main Project GitHub](https://github.com/Dewie123/testEmployeeSmartRoster)
+
+# Frontend Setup
+```
+npx create-vite@latest
+```
 
 # Source Code Installation Guides
+> Navigate to created project file path to execute the following section
+
 ## Libraries installation
 ```
 npm install

@@ -1,0 +1,65 @@
+.attendance-record-page-header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.current-attendance {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+    min-width: 300px;
+}
+.current-attendance-record-content {
+    display: flex;
+    gap: 10px;
+
+    .even-row {
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 8px;
+    }
+    div {
+        display: flex;
+        justify-content: start;
+        gap: 5px;
+        align-items: center;
+        min-width: 180px;
+
+        .clock-icon {
+            font-size: 14px;
+            color: var(--h2);
+            min-width: 14px;
+        }
+    }
+}
+.attendance-record-mobile-data {
+    display: flex;
+    flex-direction: column;
+}
+.attendance-record-mobile-data-row {
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.attendance-record-mobile-title {
+    min-width: 200px !important;
+}
+.odd-row {
+    background-color: var(--table-odd-row);
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .attendance-record-mobile-data-row {
+        display: flex;
+        flex-direction: column !important;
+        gap: 5px !important;
+    }
+    .attendance-record-mobile-title {
+        min-width: none !important;
+    }
+}

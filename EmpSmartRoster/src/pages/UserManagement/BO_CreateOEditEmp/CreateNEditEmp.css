@@ -1,0 +1,158 @@
+.mobile-create-emp-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .App-header {
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.create-new-emp-icon {
+    padding: 5px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.create-new-emp-icon:hover {
+    cursor: pointer;
+    background-color: var(--primary-background);
+    color: var(--light-color-text);
+}
+
+.create-edit-emp-content {
+    gap: 5px !important;
+}
+
+.create-employee-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    .create-emp-left,
+    .create-emp-right {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: start;
+    }
+}
+
+.create-edit-emp-button {
+    display: flex;
+    justify-content: end;
+}
+
+.all-create-employee-data {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    .create-employee-confirmation-detail{
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        gap: 5px;
+        padding: 2px;
+        padding-left: 7px;
+        padding-right: 7px;
+
+        .title {
+            font-weight: bold;
+            width: 200px;
+        }
+    }
+    .create-employee-confirmation-detail.odd-row{
+        background-color: var(--table-odd-row);
+    }
+}
+
+.confirm-create-edit-emp-completion {
+    gap: 5px !important;
+}
+
+.create-emp-warning-message-text {
+    text-align: center;
+}
+
+.error-reach-user-limit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: fit-content;
+    gap: 10px !important;
+
+    .error-reach-user-limit {
+        width: auto;
+        max-width: none !important;
+    }
+
+    .error-reach-user-limit-button {
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+    .error-reach-user-limit-button:hover {
+        background-color: var(--error);
+        color: var(--light-color-text);
+    }
+}
+
+.edit-employee-icon {
+    font-size: 23px !important;
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .create-employee-form {
+        flex-direction: column;
+    }
+
+    .create-emp-right {
+        margin-bottom: 20px;
+    }
+
+    .warining-message-in-confirmatiom-prompt {
+        display: flex;
+        flex-direction: column;
+        gap: 10px !important;
+        justify-content: start;
+    }
+
+    .confirm-create-edit-emp-completion {
+        h3 {
+            font-size: var(--text-h4);
+        }
+
+        .create-emp-warning-message-text,
+        .warning-message-text {
+            font-size: 12px;
+        }
+    }
+
+    .all-create-employee-data {
+        max-height: 250px;
+        overflow: auto;
+
+        .create-employee-confirmation-detail {
+            flex-direction: column;
+            height: auto;
+
+            .title {
+                width: 140px;
+                min-width: 140px;
+            }
+
+            .main-data {
+                height: auto;
+            }
+        }
+    }
+}

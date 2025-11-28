@@ -1,0 +1,78 @@
+.complete-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.compley-company-info,
+.complete-personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.complete-profile-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.warning-message {
+    display: flex;
+    flex-direction: row;
+    color: var(--warning);
+    gap: 5px;
+    align-items: center;
+    background-color: var(--warning-background);
+    padding: 5px;
+    border-radius: 5px;
+    font-size: var(--text-size-m);
+}
+
+.confirmation-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .company-info, 
+    .personal-info {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+
+        .display-filled-information {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            gap: 5px;
+
+            .title {
+                width: 100px;
+                min-width: 100px;
+                font-weight: bold;
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
+.address-input-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.warining-message-in-confirmatiom-prompt {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: start;
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+}

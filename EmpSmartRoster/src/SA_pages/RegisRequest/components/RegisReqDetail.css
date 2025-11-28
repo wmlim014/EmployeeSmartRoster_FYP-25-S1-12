@@ -1,0 +1,51 @@
+.company-name {
+    width: 100%;
+}
+
+.detail-content {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    justify-content: space-between;
+
+    .regs-status, .request-date {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        gap: 5px;
+        align-items: center;
+        align-content: center;
+    }
+
+    .title {
+        font-weight: bold;
+    }
+
+    .pending {
+        color: var(--warning) !important;
+    }
+    
+    .approved {
+        color: var(--success) !important;
+    }
+
+    .rejected {
+        color: var(--error) !important;
+    }
+}
+
+.uen {
+    align-items: center;
+}
+
+.btns-grp {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: end;
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    
+}

@@ -1,0 +1,136 @@
+/* General Layout */
+.app-description-container {
+  padding: 24px 250px;
+  display: flex;
+  width: 100%;
+  background-color: white;
+  padding-bottom: 100px;
+}
+
+.app-description-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 5px;
+  flex-grow: 1;
+  padding-right: 77px;
+  background-color: white;
+}
+
+/* Text Section */
+.app-description-text {
+  width: 484px;
+  height: 375px;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* Video Section */
+.app-description-video {
+  align-items: center;
+  flex-direction: column;
+  padding: 23px 18px;
+  position: relative;
+  display: flex;
+}
+
+/* Video Thumbnail */
+.video-thumbnail {
+  object-fit: cover;
+  object-position: center;
+  width: 550px;
+  height: 296px;
+  z-index: 1;
+}
+
+/* Table and Icon Styles */
+table {
+  width: 100%;
+}
+
+.icon {
+  height: 50px;
+  float: right;
+}
+
+.icon-container {
+  float: right;
+}
+
+/* Typography */
+.section-title {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Spacers */
+.spacer {
+  height: 13px;
+}
+
+/* Responsive Styling */
+@media (min-width: 1270px) {
+  .app-description-content {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-description-container {
+    padding: 24px;
+  }
+
+  .app-description-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .app-description-text {
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+  }
+
+  .app-description-video {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .video-thumbnail {
+    width: 100%;
+    height: auto;
+    max-width: 550px;
+  }
+}
+
+/* ========== Animations ========== */
+
+/* Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Classes */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Optional delays */
+.fade-delay-1 {
+  animation-delay: 0.2s;
+}
+
+.fade-delay-2 {
+  animation-delay: 0.4s;
+}

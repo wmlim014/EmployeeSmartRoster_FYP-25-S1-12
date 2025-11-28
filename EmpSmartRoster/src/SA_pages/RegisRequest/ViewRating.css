@@ -1,0 +1,122 @@
+/* Container */
+.viewRatingContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.ratingContent {
+  flex: 1;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.ratingContent h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Table Styles */
+.ratingTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.ratingTable th,
+.ratingTable td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.ratingTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.ratingTable td {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Filter input */
+.filterInput {
+  margin-top: 0.25rem;
+  width: 100%;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+/* Sort icons */
+.headerWithSort {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Button */
+.filterToggleButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #3f72af;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hide mobile cards by default */
+.mobileCards {
+  display: none;
+}
+
+/* Responsive: Mobile Styles */
+@media (max-width: 768px) {
+  .viewRatingContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .ratingContent {
+    padding: 1rem;
+  }
+
+  /* Hide table */
+  .ratingTable.desktopOnly {
+    display: none;
+  }
+
+  /* Show cards */
+  .mobileCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .mobileCard {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobileCard p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+  }
+
+  .mobileCard strong {
+    color: #333;
+  }
+
+  .ratingContent h2 {
+    font-size: 1.5rem;
+  }
+}

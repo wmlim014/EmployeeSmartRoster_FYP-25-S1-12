@@ -1,0 +1,27 @@
+.secondary-button {
+  border-style: solid;
+  border-color: var(--side-menu-background);
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 10px;
+  display: flex;
+  width: fit-content;
+  height: fit-content;
+  font-size: var(--text-size);
+  line-height: normal;
+  text-align: center;
+  font-weight: 600;
+  gap: 30px;
+  max-height: fit-content;
+  background-color: none;
+  color: var(--h2);
+}
+
+.secondary-button:hover {
+  color: var(--error);
+  background-color: none;
+}
+
+.secondary-button:disabled {
+  color: var(--secondary-background);
+}

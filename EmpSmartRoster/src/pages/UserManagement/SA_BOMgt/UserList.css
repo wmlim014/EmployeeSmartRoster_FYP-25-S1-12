@@ -1,0 +1,51 @@
+.filter-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .filter-title {
+        color: var(--purple-color-text);
+        font-weight: bold;
+    }
+  }
+
+  .filter-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .subscription-status, 
+  .account-status, 
+  .uen-company-name {
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: start;
+    justify-content: start;
+    align-content: start;
+    margin: none;
+  }
+  
+  .status-dropdown,  .search-input{
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: var(--secondary-background);
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .filter-search {
+        flex-direction: column;
+        gap: 20px;
+        width: auto;
+    }
+}

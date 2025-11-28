@@ -1,0 +1,51 @@
+.policy-terms-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    min-width: 80%;
+    align-self: center;
+    background-color: white;
+    padding: 23px;
+    justify-content: center;
+    gap: 15px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-style: outset;
+    border-right-color: var(--side-menu-background);
+    border-bottom-color: var(--side-menu-background);
+}
+
+.policy-terms-tab {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: start;
+    align-items: center;
+    color: var(--primary-background);
+}
+
+.policy-terms-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* background-color: var(--light-color-text); */
+}
+
+.is-agree-legal-agreement {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+}
+
+.privacy-policy-terms-of-service-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--light-color-text);
+}

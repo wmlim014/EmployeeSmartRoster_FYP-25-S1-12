@@ -1,0 +1,77 @@
+.alert-container {
+    position: fixed;
+    flex-direction: column;
+    top: 20px;
+    right: 20px;
+    min-width: 300px;
+    max-width: 400px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    animation: slideIn 0.3s ease-out;
+  }
+
+  .alert-title {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-bottom: 5px;
+    border-bottom-style: outset;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--secondary-text);
+  }
+  
+  .alert-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    padding-top: 10px;
+    gap: 5px;
+
+    .alert-content-content {
+      color: var(--primary-text);
+    }
+  }
+  
+  .alert-success {
+    background-color: var(--success-background);
+    color: var(--success);
+  }
+  
+  .alert-error {
+    background-color: var(--error-background);
+    color: var(--error);
+  }
+  
+  .alert-warning {
+    background-color: var(--warning-background);
+    color: var(--warning);
+  }
+  
+  .alert-info {
+    background-color: var(--info-background);
+    color: var(--info);
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .alert-container {
+      width: 80%;
+    }
+}

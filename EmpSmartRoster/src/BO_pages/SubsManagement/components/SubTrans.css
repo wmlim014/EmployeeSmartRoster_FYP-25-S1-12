@@ -1,0 +1,31 @@
+.header-subtransaction-ref,
+.body-subtransaction-ref {
+    /* width: auto; */
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.header-subtransaction-subsPlans,
+.body-subtransaction-subsPlans,
+.header-subtransaction-price,
+.body-subtransaction-price,
+.header-subtransaction-subsStatus,
+.body-subtransaction-subsStatus,
+.header-subtransaction-start,
+.body-subtransaction-start,
+.header-subtransaction-end,
+.body-subtransaction-end {
+    min-width: 110px;
+    max-width: 110px;
+}
+
+.header-subtransaction-reason,
+.body-subtransaction-reason {
+    min-width: auto;
+}
+
+.subs-transaction-title {
+    justify-content: start;
+    align-items: end;
+    gap: 10px;
+}

@@ -1,0 +1,31 @@
+.bo-user-header {
+    .bo-user-header-uen {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .bo-user-header-company-name {
+        width: 1fr;
+    }
+
+    .bo-user-header-subs-status {
+        min-width: 200px;
+        max-width: 200px;
+    }
+}
+
+.bo-user-table-row {
+    .bo-user-table-row-uen {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .bo-user-table-row-company-name {
+        width: 1fr;
+    }
+
+    .bo-user-table-row-subs-status {
+        min-width: 200px;
+        max-width: 200px;
+    }
+}

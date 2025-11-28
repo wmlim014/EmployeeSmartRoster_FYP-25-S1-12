@@ -1,0 +1,49 @@
+.user-info,
+.job-position-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.account-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.user-info-data, 
+.job-position-info-data {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: start;
+    align-items: center;
+}
+
+.job-position-info {
+    padding-bottom: 15px;
+    border-bottom: outset;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--primary-background);
+}
+
+.display-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.last-update-date-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 15px;
+}
+
+.suspend-btn {
+    display: flex;
+    gap: 10px;
+    width: fit-content;
+}

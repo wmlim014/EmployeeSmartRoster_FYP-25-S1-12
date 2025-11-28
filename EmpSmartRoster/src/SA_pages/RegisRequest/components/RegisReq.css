@@ -1,0 +1,116 @@
+.registration-request {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: fit-content;
+}
+
+.regis-req {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--primary-background);
+    border-radius: 10px;
+    gap: 5px;
+    background-color: var(--light-color-text);
+    height: fit-content;
+}
+
+.regis-req-name {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--primary-background);
+    height: fit-content;
+    align-items: center;
+
+    .regis-req-detail {
+        color: var(--primary-background);
+        font-size: 30px;
+        padding: 5px;
+        border-radius: 10px;
+    }
+}
+
+.regis-req-detail:hover {
+    background-color: var(--primary-background);
+    color: var(--light-color-text);
+}
+
+.regis-req-data {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 10px;
+}
+
+.uen, .regis-id {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+}
+
+.uen-title, .rID-title{
+    width: 60px;
+    font-weight: bold;
+}
+
+button {
+    background-color: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+button:hover {
+    background-color: none; 
+}
+
+.desktop-table-header {
+    display: flex;
+    flex-direction: row;
+
+    .header-uen {
+        min-width: 130px;
+        max-width: 130px;
+    }
+
+    .header-company-name {
+        width: 1fr; /* takes remaining space */
+    }
+
+    .header-status {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .header-reg-date {
+        min-width: 200px;
+        max-width: 200px;
+    }
+}
+
+.regis-req-row {
+    .body-uen {
+        min-width: 130px;
+        max-width: 130px;
+    }
+
+    .body-company-name {
+        width: 1fr; /* takes remaining space */
+    }
+
+    .body-status {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .body-reg-date {
+        min-width: 200px;
+        max-width: 200px;
+    }
+}

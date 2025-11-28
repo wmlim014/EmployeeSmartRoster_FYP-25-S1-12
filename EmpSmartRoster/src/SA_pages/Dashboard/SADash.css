@@ -1,0 +1,49 @@
+
+/* Desktop (1024px+) */
+@media only screen and (min-width: 1024px) {
+    .dashboard-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        min-height: auto;
+        height: 100%;
+        gap: 20px;
+        width: auto;
+    }
+
+    .side-menu {
+        display: flex;
+        max-width: fit-content;
+    }
+
+    .virtual-data {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: start;
+        align-items: start;
+        max-width: fit-content;
+        max-height: 100%;
+    }
+}
+
+/* Tablet (769px-1023px) */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    .dashboard-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        min-height: auto;
+        height: 100%;
+        padding: 10px;
+        gap: 50px;
+    }
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    .side-menu{
+        display: none;
+    }
+}
+

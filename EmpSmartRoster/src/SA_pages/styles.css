@@ -1,0 +1,49 @@
+/* Reset parent container */
+.sa-preview-landing-content {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Button alignment */
+.preview-back-button {
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--main-page-background);
+}
+
+/* Force GuestLanding to ignore internal constraints */
+.preview-guest-landing > * {
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Override GuestLanding's max-width if needed */
+.preview-guest-landing .landing-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Highlight containers at 1248px+ */
+@media (min-width: 1248px) {
+
+    /* Remove empty div (if still present) */
+    .App-content > div:empty {
+    display: none;
+    }
+
+    /* Force full-width layout */
+    .sa-preview-landing-content,
+    .landing-container,
+    .video-selector-section,
+    .video-container-wrapper {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        /* padding: 0 !important; */
+    }
+}

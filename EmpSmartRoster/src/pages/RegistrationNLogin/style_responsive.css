@@ -1,0 +1,49 @@
+/* Tablet (769px-1023px) */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+    /* Registration */
+    .registration-form {
+        align-self: flex-start;
+    }
+
+    .registration-form-content {
+        width: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-content {
+        overflow-x: hidden;
+    }
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+    /* Registration */
+    .registration-form {
+        align-self: flex-start;
+    }
+    
+    .registration-form-content {
+        width: auto;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Reset password */
+    .pw-info-content {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .pw-info-content::before {
+        display: none;
+    }
+
+    .form-content {
+        overflow-x: hidden;
+    }
+}

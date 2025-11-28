@@ -1,0 +1,929 @@
+.App {
+  background-color: var(--main-page-background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter;
+  font-size: var(--text-size);
+  color: #1F2937;
+}
+
+.App-content {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  flex:1;  /* Take up remaining space */
+  width: 100vw;
+  overflow: auto;
+}
+
+.content, .App-form-content {
+  flex: 1 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  overflow: auto; /* Enable scrolling for content */
+  overflow-x: hidden;
+  justify-content: start;
+}
+
+.App-form-content {
+  gap: 30px;
+  align-self: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+.App-header {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+  height: fit-content;
+  padding-bottom: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: var(--primary-background);
+  margin-bottom: 10px;
+}
+
+.App-secondary-text {
+  font-size: var(--secondary-text);
+  color: var(--primary-text);
+}
+
+.App-light-text {
+  color: var(--light-color-text);
+}
+
+.App-purple-text {
+  color: var(--purple-color-text);
+}
+
+h1 {
+  font-weight: 800;
+  font-size: var(--text-h1);
+  color: var(--h1);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: var(--text-h2);
+  color: var(--h2);
+}
+
+h3 {
+  font-weight: bold;
+  font-size: var(--text-h3);
+  color: var(--h3);
+}
+
+h4 {
+  font-size: var(--text-h4);
+  color: var(--h3);
+}
+
+.App-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black background */
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  .App-popup-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--hover-background);
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    gap: 15px;
+    height: fit-content;
+    justify-content: start;
+  }
+
+  .App-popup-main-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      height: fit-content;
+
+      .App-popup-content-icon {
+        min-width: 15px;
+        font-size: 20px;
+        color: var(--primary-background);
+      }
+    }
+
+  .App-popup-prompt-content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-background);
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 100%;
+    gap: 20px;
+    height: fit-content;
+    justify-content: start;
+
+    .App-prompt-confirmation-title {
+      font-size: var(--text-h2-m);
+    }
+
+    .App-prompt-confirmation-title-highlighted-text {
+      font-size: var(--text-h2-m);
+      color: var(--error);
+      font-weight: bold;
+    }
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  width: auto;
+  height: fit-content;
+  font-weight: bold;
+}
+
+.main-data {
+  width: auto;
+  height: fit-content;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+/* Timeline Structure for App */
+.App-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  padding-left: 39px;
+}
+
+.App-timeline-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.App-timeline-line {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #cdcdcd;
+}
+
+/* Timeline Items */
+.App-timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.App-timeline-point {
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--side-menu-hover-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.App-timeline-icon {
+  color: var(--light-color-text);
+  font-size: 18.5px;
+}
+
+/* Timeline Content */
+.App-timeline-content {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: white;
+  border: 1.5px solid var(--light-color-text);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.App-timeline-content:hover {
+  border: 2px outset var(--primary-background);
+  cursor: pointer;
+
+}
+.App-timeline-start-and-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  min-width: 200px;
+  max-width: 210px;
+
+  strong {
+    min-width: 50px;
+  }
+}
+
+.App-timeline-time {
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  color: var(--secondary-text);
+  margin-bottom: 5px;
+  margin-left: auto;
+  gap: 5px;
+  width: 100%;
+  align-items: center;
+  color: #6c6c6c;
+}
+
+.App-timeline-divider {
+  margin: 10px 0;
+  border-top: 1px solid #c5c5c5;
+  width: 100%;
+}
+
+.App-timeline-task-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.App-timeline-task-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 5px 0;
+}
+
+.App-timeline-task-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Menu Tabs and Tab setup */
+.react-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 0px;
+  padding: 0px;
+  border-bottom-style: outset;
+  border-bottom-color: var(--primary-background);
+  border-bottom-width: 2px;
+}
+
+.react-tabs__tab {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-bottom: 2px;
+}
+
+.react-tabs__tab:hover {
+  background-color: var(--hover-background);
+}
+
+.react-tabs__tab--selected {
+  background-color: var(--hover-background) !important;
+}
+
+/* Set input text field css */
+input[type=text], 
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=time],
+input[type=tel],
+input[type=date],
+input[type=datetime-local],
+select {
+  background-color: white;
+  border-style: outset;
+  border-width: 2px;
+  border-color: var(--purple-color-text);
+  border-radius: 8px;
+  width: 100%;
+  height: 36.5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+input[type=text]:disabled, 
+input[type=email]:disabled,
+input[type=password]:disabled,
+input[type=number]:disabled,
+input[type=time]:disabled,
+input[type=tel]:disabled,
+input[type=date]:disabled,
+input[type=datetime-local]:disabled,
+textarea:disabled,
+select:disabled {
+  border-color: var(--light-color-text);
+}
+
+input[type=file] {
+  margin-top: 0.5px;
+  /* height: 30px; */
+}
+
+textarea {
+  background-color: white;
+  border-style: outset;
+  border-width: 2px;
+  border-color: var(--purple-color-text);
+  border-radius: 8px;
+  padding: 5px;
+}
+
+
+
+/* Dropdown option*/
+option {
+  color: var(--side-menu-background);
+}
+
+option:checked {
+  background-color: var(--primary-background);
+  color: var(--light-color-text);
+}
+
+/* Radio Button Group Setup */
+.radio-button-group {
+  display: flex;
+  flex-direction: column;
+  
+  strong {
+    margin-bottom: 7px;
+  }
+
+  .App-radio-option {
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    padding-top: 8px;
+    margin-bottom: 13px;
+    cursor: pointer;
+    font-size: var(--text-size);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 0px; 
+  }
+  
+  /* Hide the browser's default radio button */
+  .App-radio-option input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--text-size);
+    width: var(--text-size);
+    background-color: var(--side-menu-hover-background);
+    border-radius: 50%;
+    opacity: var(--side-menu-transparency);
+  }
+
+  /* On mouse-over, add a grey background color */
+  .App-radio-option:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .App-radio-option input:checked ~ .checkmark {
+    background-color: var(--primary-background);
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--light-color-text);
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .App-radio-option input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .App-radio-option .checkmark:after {
+     top: 8px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+}
+
+/* Custom Checkbox */
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: start;
+  align-items: start;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Hide the browser's default checkbox */
+  input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+  }
+  input:disabled {
+    color: var(--light-color-text);
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+      height: 15px;
+      width: 15px;
+      position: absolute;
+      top: 3px;
+      left: 0;
+      background-color: white;
+      border-style: outset;
+      border-color: var(--side-menu-hover-background);
+      border-width: 1.5px;
+      border-radius: 4.5px;
+      align-self: center;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+  }
+  /* Style the checkmark/indicator */
+  .checkmark:after {
+      left: 4.5px;
+      top: 0.8px;
+      width: 5px;
+      height: 10px;
+      border: solid var(--light-color-text);
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+  }
+  /* Show the checkmark when checked */
+  input:checked ~ .checkmark:after {
+      display: block;
+  }
+  /* When the checkbox is checked, add a blue background */
+  input:checked ~ .checkmark {
+      background-color: var(--side-menu-hover-background);
+  }
+}
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkmark {
+  background-color: var(--secondary-background);
+}
+
+/* Multi-select dropdown styles */
+.multiselect-dropdown-container {
+  border: 2px solid var(--table-odd-row);
+  border-radius: 8px;
+  padding: 10px;
+  background: white;
+  height: fit-content;
+}
+
+.dropdown-header {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.dropdown-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.selected-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+  min-height: 32px;
+  justify-content: start;
+  align-items: center;
+
+  .selected-tag {
+    background-color: var(--light-color-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .remove-tag {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .remove-tag:hover {
+    color: var(--error);
+  }
+
+  .no-selected {
+    color: var(--side-menu-background);
+    font-weight: 525;
+  }
+}
+
+.dropdown-options {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1.5px solid var(--light-color-text);
+  border-radius: 4px;
+}
+
+.option {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.option:hover,
+.option.selected {
+  background-color: var(--light-color-text);
+}
+
+.option.matched {
+  border-left: 3px solid var(--success);
+}
+
+.matched-badge {
+  background-color: var(--success);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+/* Others */
+.icons {
+  font-size: 30px;
+  color: var(--side-menu-background);
+  align-self: center;
+}
+
+.icons:hover {
+  color: var(--error);
+  cursor: pointer;
+}
+
+/* Desktop Table Setup */
+.App-desktop-responsive-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  width: 100%;
+}
+
+.App-desktop-table-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 0px;
+}
+
+.App-header-icon-gap {
+  min-width: 40px;
+  max-width: 40px;
+}
+
+.App-desktop-table-icon {
+  color: var(--primary-background);
+  width: fit-content;
+  font-size: 30px;
+  padding: 5px;
+  background-color: white;
+  border-bottom-color: var(--primary-background);
+  border-bottom-width: 1px;
+  border-bottom-style: outset;
+  height: auto;
+}
+
+.App-desktop-table-icon:hover {
+  cursor: pointer;
+  background-color: var(--primary-background);
+  color: var(--light-color-text);
+}
+
+/* Mobile Table Setup */
+.App-mobile-table-icon {
+  color: var(--primary-background);
+  width: fit-content;
+  font-size: 30px;
+  padding: 5px;
+  height: auto;
+  background-color: none;
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.App-mobile-table-icon:hover {
+  cursor: pointer;
+  background-color: var(--primary-background);
+  color: var(--light-color-text);
+}
+
+
+.App-mobile-responsive-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: fit-content;
+}
+
+.App-mobile-responsive-table-card {
+  display: flex;
+  flex-direction: column;
+  width: 100;
+  padding: 10px;
+  border-top: 1px solid var(--side-menu-hover-background);
+  border-left: 1px solid var(--side-menu-hover-background);
+  border-radius: 10px;
+  box-shadow: 5px 3px var(--side-menu-background);
+  gap: 5px;
+  background-color: white;
+  height: fit-content;
+
+  .App-mobile-responsive-table-card-title {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 5px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--primary-background);
+    height: fit-content;
+    align-items: center;
+  }
+  
+  .App-mobile-responsive-table-card-data {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 5px;
+
+    .App-mobile-responsive-table-card-data-detail {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      gap: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      border-radius: 5px;
+
+      .App-mobile-responsive-table-card-data-title {
+        min-width: 120px;
+        max-width: 120px;
+        font-weight: bold;
+      }
+    }
+    .even-row {
+      background-color: var(--light-color-text);
+    }
+  }
+}
+
+.App-filter-search-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+  height: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  gap: 10px;
+}
+
+.App-filter-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.App-filter-title {
+    color: var(--purple-color-text);
+    font-weight: bold;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--error);
+
+  .error-message-text {
+    max-width: 260px
+  }
+}
+
+.valid-message {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+  font-size: 14px;
+  color: var(--success);
+
+  .valid-icon {
+    font-size: 20px;
+  }
+}
+
+/* Desktop (1024px+) */
+@media only screen and (min-width: 1024px) {
+  .App-mobile-responsive-table {
+    display: none;
+  }
+}
+
+/* Tablet (769px-1023px) */
+@media only screen and (min-width: 769px) and (max-width: 1023px) {
+  .App-desktop-responsive-table {
+    display: none;
+  }
+
+  .App-mobile-responsive-table-card {
+    display: flex;
+  }
+
+  .App-timeline-start-and-end {
+    align-self: flex-end;
+  }
+
+  .App-timeline-time {
+      display: flex;
+      flex-direction: row;
+      font-size: 13px;
+      color: var(--secondary-text);
+      margin-bottom: 5px;
+      margin-right: auto !important;
+      margin-left: 0px !important;
+      gap: 5px;
+      align-items: center;
+      color: #6c6c6c;
+      min-width: 143px;
+  }
+
+  .App-timeline-task-title-container {
+        flex-direction: column !important;
+        justify-content: start !important;
+        gap: 0px;
+    }
+}
+
+/* Mobile (all screens below 768px) */
+@media only screen and (max-width: 768px) {
+  .App {
+    font-size: var(--text-size-m);
+  }
+
+  .App-secondary-text {
+    font-size: var(--secondary-text-m);
+  }
+
+    .App-content {
+      flex-direction: column;
+    }
+
+  .App-popup-content  {
+    .App-popup-main-content {
+      .App-popup-content-icon {
+        font-size: 15px;
+        align-items: center;
+      }
+    }
+  }
+
+  h1 {
+    font-size: var(--text-h1-m);
+  }  
+
+  h2 {
+    font-size: var(--text-h2-m);
+  }
+
+  h3 {
+    font-size: var(--text-h3-m);
+  }
+
+  h4 {
+    font-size: var(--text-h4-m);
+  }
+
+  .App-desktop-responsive-table {
+    display: none;
+  }
+
+  .App-mobile-responsive-table-card {
+    display: flex;
+  }
+
+  .App-filter-search-component {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .App-timeline-time {
+        display: flex;
+        flex-direction: row;
+        font-size: 13px;
+        color: var(--secondary-text);
+        margin-bottom: 5px;
+        margin-right: auto !important;
+        margin-left: 0px !important;
+        gap: 5px;
+        align-items: center;
+        color: #6c6c6c;
+        min-width: 143px;
+    }
+
+    
+    .App-timeline-start-and-end {
+      align-self: flex-end;
+    }
+
+    .App-timeline-task-title-container {
+        flex-direction: column !important;
+        gap: 0px !important;
+    }
+}

@@ -1,0 +1,63 @@
+/* General container styling */
+.subscription-plans-container {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background-color: white;
+  padding: 20px;
+  font-family: Inter, sans-serif;
+  width: 100%;
+  padding-left: 50px;
+}
+
+/* Header styling with floating title */
+.subscription-plans-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* margin-bottom: 20px; */
+}
+
+.subscription-icon {
+  width: 70px;
+  height: 67px;
+  object-fit: cover;
+}
+
+/* Floating title next to the logo */
+.subscription-title {
+  font-size: 24px;
+  font-weight: 600;
+  text-decoration: underline;
+  margin: 0;
+  flex-grow: 1; /* Make title occupy remaining space */
+  text-align: left; /* Align left */
+}
+
+/* Table styling without background color but with borders */
+.subscription-table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.subscription-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subscription-table th,
+.subscription-table td {
+  padding: 12px;
+  border: 0.5px solid #dddddd; /* Added border to each column */
+  text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .subscription-table-container {
+    overflow-x: auto;
+  }
+
+  .subscription-table th,
+  .subscription-table td {
+    padding: 8px;
+  }
+}

@@ -1,0 +1,375 @@
+.task-detail-information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: start;
+
+    .task-detail-info-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.allocated-staff-container,
+.task-detail-contained-timeline {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 15px;
+  width: auto;
+}
+
+.task-detail-contained-timeline {
+  gap: 5px;
+  background-color: var(--side-menu-background);
+  padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+  color: var(--light-color-text);
+
+  .title {
+    font-weight: bold;
+  }
+}
+
+.task-detail-contained-timeline:hover,
+.task-detail-contained-timeline.disabled {
+  background-color: var(--main-page-background);
+  border-style: solid;
+  color: var(--primary-text);
+  border-width: 2px;
+  border-color: var(--side-menu-background);
+  cursor: pointer;
+}
+
+.task-detail-contained-timeline.disabled {
+  cursor: default !important;
+}
+
+.allocated-staff-container-title {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: start;
+  align-items: center;
+  width: auto;
+
+  .task-allocated-status {
+    color: var(--info);
+  }
+  
+  .task-allocated-status.in-progress {
+    color: var(--warning);
+  }
+  
+  .task-allocated-status.completed {
+    color: var(--success);
+  }  
+}
+
+.allocated-date-detail {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: start;
+    width: auto;
+}
+
+.start-date-detail-data, 
+.end-date-detail-data {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+    justify-content: start;
+    width: auto;
+}
+
+.event-detail-date-display, 
+.event-detail-time-display,
+.task-detail-description {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: start;
+    justify-content: start;
+    width: fit-content;
+}
+
+.task-detail-description-icon {
+    margin-top: 3px;
+}
+
+.task-detail-description{
+    display: flex;
+    flex-direction: row;
+    gap: 5;
+}
+
+.start-date-detail, .end-date-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.event-button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: end;
+    align-items: baseline;
+}
+
+.role-skill-title {
+  font-weight: bold;
+  border-bottom: 2px;
+  border-bottom-style: dotted;
+  border-bottom-color: var(--side-menu-background);
+  padding-bottom: 5px;
+}
+
+.event-detail-header-btns-grp {
+  display: flex;
+  gap: 5px;
+  width: fit-content;
+}
+
+/* See Allocated Staff Detail Content (invisible by default) */
+.allocated-staff-info {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+.allocated-staff-detail-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+
+}
+
+.allocated-staff-detail-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 300px;
+    /* color: var(--light-color-text); */
+    background-color: white;
+    border-top-style: outset;
+    border-top-width: 8px;
+    border-top-color: var(--side-menu-background);
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    padding: 15px;
+    padding-top: 5px;
+    margin-top: 5px;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  /* Show the allocated staff content detail when active */
+  .allocated-staff-info.active .allocated-staff-detail-content {
+    display: block;
+  }
+  
+  /* Dropdown arrow */
+  .allocated-staff-detail-content::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 15px;
+    border-width: 16px;
+    /* border-style: solid; */
+    border-color: transparent transparent var(--side-menu-background) transparent;
+    filter: drop-shadow(0 -2px 1px rgba(0,0,0,0.1));
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* See more allocated staff content setup */
+  .allocated-staff-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+
+    .allocated-staff-title {
+      padding-bottom: 2px;
+      border-bottom: 2px;
+      border-bottom-style: dotted;
+      border-bottom-color: var(--side-menu-background);
+    }
+
+    .allocated-staff-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      justify-content: start;
+      align-items: center;
+    }
+
+    .allocated-staff-contact-no, .allocated-staff-email {
+        padding-left: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .allocation-date-detail-container {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      justify-content: start;
+      padding: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border-radius: 5px;
+      background-color: var(--side-menu-background);
+      color: var(--light-color-text);
+
+      .title {
+        font-weight: bold;
+      }
+    }
+  }
+
+/* See More Task Detail Content (invisible by default) */
+.see-more-task-detail {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+
+.see-more-task-detail-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 300px;
+    /* color: var(--light-color-text); */
+    background-color: white;
+    border-top-style: outset;
+    border-top-width: 8px;
+    border-top-color: var(--side-menu-background);
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    padding: 15px;
+    padding-top: 5px;
+    margin-top: 5px;
+    animation: fadeIn 0.2s ease-out;
+  }
+  
+  /* Show the see more detail when active */
+  .see-more-task-detail.active .see-more-task-detail-content {
+    display: block;
+  }
+  
+  /* Dropdown arrow */
+  .see-more-task-detail-content::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 15px;
+    border-width: 16px;
+    /* border-style: solid; */
+    border-color: transparent transparent var(--side-menu-background) transparent;
+    filter: drop-shadow(0 -2px 1px rgba(0,0,0,0.1));
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* See more task detail conponent setup */
+  .role-and-skill-needed-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 20px;
+
+    .role-needed, .skill-needed {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 3px;
+
+        .role-needed-data, .skill-needed-data {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    .allocated-staff-container {
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    /* See allocated staff detail content setup */
+    .allocated-staff-detail-content {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .allocated-staff-detail-content::before {
+        display: none;
+    }
+
+    /* See more task detail content setup */
+    .see-more-task-detail-content {
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .see-more-task-detail-content::before {
+        display: none;
+    }
+
+    .allocated-date-detail {
+        flex-direction: column;
+        align-items: start;
+        gap: 2px;
+    }
+}

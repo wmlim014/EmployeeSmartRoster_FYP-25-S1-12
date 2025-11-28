@@ -1,0 +1,40 @@
+/* .content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+} */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 40px;
+}
+
+.roles, .skill {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-header {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 10px;
+    justify-items: start;
+    align-items: center;
+
+    .add-role-skill {
+        color: var(--primary-background);
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+}
+
+.add-role-skill:hover {
+    background-color: var(--side-menu-background);
+    color: var(--light-color-text);
+}
+

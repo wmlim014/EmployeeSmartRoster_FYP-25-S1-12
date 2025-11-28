@@ -1,0 +1,70 @@
+/***************************************************************
+ * Outer container: centers the heading + layout vertically & horizontally
+ ***************************************************************/
+ .bo-profile {
+    min-height: 20vh;             /* fill the viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;       /* vertical centering */
+    align-items: center;           /* horizontal centering */
+    margin: 0;
+    background-color: #f3eafc;     /* optional light purple */
+  }
+  
+  /***************************************************************
+   * Page Title
+   ***************************************************************/
+  .bo-profile_title {
+    font-size: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  /***************************************************************
+   * Layout container (the white card + the side buttons)
+   ***************************************************************/
+  .bo-profile_layout {
+    display: flex;
+    align-items: center;  /* align them at the top edge */
+    gap: 40px;            /* space between the card and the buttons */
+    padding-left: 39%;
+  }
+  
+  /***************************************************************
+   * The white container (profile card)
+   ***************************************************************/
+  .bo-profile_card {
+    background-color: white;
+    width: 400px;             /* adjust as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;       /* center text, optional */
+  }
+  
+  /* Icon styling */
+  .bo-profile_icon {
+    color: var(--primary-background);
+    margin-bottom: 16px;
+    margin-left: 38%;
+  }
+  
+  /* Info text */
+  .bo-profile_info {
+    margin-bottom: 16px;
+    text-align: left;         /* left-align labels if you prefer */
+    border: none;
+  }
+  
+  .bo-profile_label {
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+
+  .bo_button_control {
+    padding-top: 30px;
+    width: 300px;
+    padding-left: 30%;
+  }
+  

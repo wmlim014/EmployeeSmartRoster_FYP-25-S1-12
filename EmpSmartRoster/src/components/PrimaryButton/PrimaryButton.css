@@ -1,0 +1,45 @@
+.primary-button {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: blueviolet;
+    border-width: 1px;
+    border-radius: 15px;
+    padding: 20px 46px;
+    width: fit-content;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    line-height: normal;
+    text-align: center;
+    background-color: var(--primary-background);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    max-height: 30px;
+    border-radius: 15px;
+    padding: 8px 20px;
+    max-height: fit-content;
+  }
+
+  .primary-button-icon {
+    font-size: 17px;
+  }
+  
+  .primary-button:hover {
+    background-color: var(--hover-background);
+    color: black;
+  }
+  
+  .primary-button:disabled {
+    background-color: var(--secondary-background);
+    border: none;
+    cursor: default;
+  }
+  .primary-button:disabled:hover {
+    background-color: var(--secondary-background);
+    border: none;
+    color: white;
+    cursor: default;
+  }
